@@ -94,8 +94,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['productCode']) && isse
                         echo "<td>" . $row['product_code'] . "</td>";
                         echo "<td>" . $row['product_id'] . "</td>";
                         echo "<td>" . $row['testing_revise'] . "</td>";
-                        // Button to view details of the product
-                        echo "<td><button type='submit' name='details' class='btn btn-primary view-details-btn' id=" . $row['sno'] . ">View Details</button></td>";
                         echo "</tr>";
                     }
                 } else {
@@ -106,45 +104,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['productCode']) && isse
             </tbody>
         </table><br><br>
 
-        <!-- Details section -->
-        <div id="details" style="display: none; padding: 20px; border: 1px solid #ccc; border-radius: 5px;">
-            <input type="hidden" name="detailid" id="detailidd">
-            <?php
-            // Check if the "details" button is clicked
-            if (isset($_POST["details"])) {
-                // Get the ID of the clicked button
-                $id = $_POST["detailid"];
-                
-                // SQL query to retrieve details based on ID
-                $detail = "SELECT * FROM testing_process WHERE sno ='$id'";
-                $res = mysqli_query($con, $detail);
-                $Records = mysqli_num_rows($res);
-                if ($Records > 0) {
-                    $data = mysqli_fetch_assoc($res);
-
-                    // Display product details
-                    echo "
-                    <div class='row mb-3'>
-                        <div class='col-md-6'>
-                            <label for='testing_id'>Testing ID:</label>
-                            <span>" . $data['testing_id'] . "</span>
-                        </div>
-                        <div class='col-md-6'>
-                            <label for='product_id'>Product ID:</label>
-                            <span>" . $data['product_id'] . "</span>
-                        </div>
-                    </div>
-                    <!-- Add more details here -->
-                    <button id='close-details-btn' class='btn btn-secondary' style='margin-left: 30%'>Close</button>
-                    ";                
-                } else { 
-                    // Display an error message if data is not found
-                    echo "Error: Data not found.";
-                }
-            }
-            ?>
-        </div>
-
     </div><br><br>
 
     <!-- Footer -->
@@ -153,22 +112,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['productCode']) && isse
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/logout.js"></script>
-    <script src="assets/js/details.js"></script>
-    <script>
-        // JavaScript code for handling details button click
-        Details = document.getElementsByClassName("view-details-btn");
-
-        Array.from(Details).forEach((element) => {
-            element.addEventListener("click", (e) => {
-
-                tr = e.target.parentNode.parentNode;
-
-                detailidd.value = e.target.id;
-
-                console.log("id is working now", e.target.id)
-            });
-        });
-    </script>
 </body>
 
 </html>
