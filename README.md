@@ -1,7 +1,7 @@
 # Lab Automation System
 
 **Participants:** Muhammad Yousuf, Khuzaima Ahmed, Shoaib Shah, Muhammad Yahya
-**Mentor:** Syed Muhammad Arsalan Shah
+# **Mentor:** Syed Muhammad Arsalan Shah
 
 ## Table of Contents
 
