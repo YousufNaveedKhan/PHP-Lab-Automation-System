@@ -10,12 +10,11 @@
 3. [Project Analysis](#project-analysis)
 4. [Project Design](#project-design)
 5. [DFDs](#dfds)
-6. [Flow Charts](#flow-charts)
-7. [Process Diagram](#process-diagram)
-8. [Screen Shots](#screen-shots)
-9. [Source Code](#source-code)
-10. [User Guide](#user-guide)
-11. [Developer’s Guide](#developers-guide)
+6. [Process Diagram](#process-diagram)
+7. [Screen Shots](#screen-shots)
+8. [Source Code](#source-code)
+9. [User Guide](#user-guide)
+10. [Developer’s Guide](#developers-guide)
 
 ## Introduction
 The Lab Automation System is a software application designed to automate laboratory or testing facility operations. It aims to streamline testing processes, facilitate data management, and enhance overall productivity. This project was developed collaboratively to provide a comprehensive lab automation solution.
