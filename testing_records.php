@@ -167,7 +167,7 @@
             </form>";
             }  ?>
         </div>
-    </div>
+    </div><br><br><br>
 
     <?php require "assets/php/footer.php"; ?>
 
