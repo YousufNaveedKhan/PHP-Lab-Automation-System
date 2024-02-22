@@ -96,6 +96,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <div class="modal-body">
                         <h5>Testing Summary</h5>
                         <?php
+                        require "assets/php/connections/testing_connection.php";
                         // Query to fetch testing summary
                         $sql = "SELECT COUNT(*) AS total_products, 
                                     SUM(CASE WHEN testing_result = 'Pass' THEN 1 ELSE 0 END) AS passed_products,
