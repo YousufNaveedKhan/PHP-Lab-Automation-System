@@ -157,7 +157,7 @@ $result = mysqli_query($con, $sql);
                 ?>
             </tbody>
         </table>
-    </div>
+    </div><br><br><br>
 
     <?php require "assets/php/footer.php"; ?>
 
@@ -171,6 +171,8 @@ $result = mysqli_query($con, $sql);
     <script src="assets/js/users_delete.js"></script>
     <!-- Logout Script -->
     <script src="assets/js/logout.js"></script>
+    <!-- Bootstrap v5.3.2 Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         // Data Table
         $(document).ready(function() {
